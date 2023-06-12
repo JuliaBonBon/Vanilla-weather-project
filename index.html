@@ -4,61 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-  <link rel="srylesheet" href="src/style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="src/style.css" />
 
   <title>Weather app</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="weather-app">
-      <form action="">
-        <div class="row">
-          <div class="col-9">
-            <input type="search" placeholder="Enter a city..." class="form-control search-input">
+    <div class="weather-app-wrapper">
+      <div class="weather-app">
+        <form action="">
+          <div class="row">
+            <div class="col-9">
+              <input type="search" placeholder="Enter a city..." class="form-control search-input" id="city-input">
+
+            </div>
+            <div class="col-2 p-0">
+              <input type="submit" class="btn btn-primary w-100" value="Search">
+            </div>
           </div>
-          <div class="col-2 p-0">
-            <input type="submit" class="btn btn-primary w-100" value="Search">
-          </div>
-        </div>
-      </form>
-      <h1>
-        Kyiv
-      </h1>
-      <ul>
-        <li>
-          Friday 19:00
-        </li>
-        <li>
-          Cloudy
-        </li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="Rainy" />
-          19° C | ° F
-        </div>
-        <div class="col-6">
+        </form>
+        <div class="overview">
+          <h1 id="city">
+            Kyiv
+          </h1>
           <ul>
-            <li>
-              Precipitation: 85%
+            <li id="date">
+              Friday 19:00
             </li>
-            <li>
-              Humididty: 50%
-            </li>
-            <li>
-              Wind: 14 km/h
+            <li id="description">
+              Cloudy
             </li>
           </ul>
         </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="d-flex weather-temperature">
+              <img src="https://ssl.gstatic.com/onebox/weather/64/rain_s_cloudy.png" alt="Rainy" id="icon"
+                class="temperature-icon" />
+              <div class="temp-values">
+
+                <strong id="temperature">19</strong>
+                <span class="units"> °C | °F </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>
+                Precipitation: 85%
+              </li>
+              <li>
+                Humididty: 50%
+              </li>
+              <li>
+                Wind: 14 km/h
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <small>
+        <a href="https://github.com/JuliaBonBon/Vanilla-weather-project" target="_blank">Open-source code</a> by
+        Yuliia
+        Drivinska
+      </small>
     </div>
-    <small>
-      <a href="https://github.com/JuliaBonBon/Vanilla-weather-project" target="_blank">Open-source code</a> by Yuliia
-      Drivinska
-    </small>
   </div>
   <script src="src/index.js"></script>
 </body>
