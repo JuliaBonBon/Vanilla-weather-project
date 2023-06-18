@@ -58,6 +58,10 @@ li:first-letter {
 
 .units {
   position: relative;
-  font-size: 15px;
-  top: -25px;
+  font-size: 17px;
+  top: -23px;
+}
+
+a {
+  text-decoration: none;
 }
