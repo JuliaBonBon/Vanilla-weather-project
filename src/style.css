@@ -4,6 +4,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.container {
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 40px auto;
@@ -14,7 +24,8 @@ body {
   border: 1px solid #686868;
   border-radius: 7px;
   box-shadow: 10px 6px 86px -20px #888888;
-  background-color: rgba(185, 199, 211, -1, 5);
+  background-color: rgba(208, 230, 284, 0.8);
+  opacity: 0.8;
 }
 
 .overview {
