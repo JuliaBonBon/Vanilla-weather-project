@@ -75,9 +75,12 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
+  let maxTemperatureElement = document.querySelector("#max-temperature");
+  let minTemperatureElement = document.querySelector("#min-temperature");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
@@ -88,6 +91,8 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  maxTemperatureElement.innerHTML = Math.round(response.data.main.temp_max);
+  minTemperatureElement.innerHTML = Math.round(response.data.main.temp_min);
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
