@@ -80,6 +80,9 @@ li:first-letter {
 a {
   text-decoration: none;
 }
+small {
+  opacity: 0.8;
+}
 
 .active {
   color: rgb(33, 33, 33);
